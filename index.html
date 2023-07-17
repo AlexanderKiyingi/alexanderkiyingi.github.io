@@ -310,84 +310,53 @@
 <div class="contianer-fluid bg-light">
     <div class="row">
         <div class="container">
+            <div class="row">
             <!--testimonials-->
             <div class="col-md-12 mt-2 mb-2 pt-2 pb-2 ">
                 <h2 class="text-center text-dark mt-1 pt-1">Testimonials</h2>
                 <p class="text-center text-secondary mb-1 pb-1"><em>what clients say about our services & products</em></p>
-                <div class="row">
-                    <div class="carousel slide " id="testimonialSlider" data-ride="carousel">
-
-                        <!-- Indicators -->
-                        <ul class="carousel-indicators">
-                        <li data-target="#testimonialSlider" data-slide-to="0" class="active"></li>
-                        <li data-target="#testimonialSlider" data-slide-to="1"></li>
-                        <li data-target="#testimonialSlider" data-slide-to="2"></li>
-                        </ul>
-                    
-                        <!-- The slideshow -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <!-- <img src="./images/" alt="Los Angeles"> -->
-                                <div class="row">
-                                    <div class="col-md-7 mt-2 mb-2 pt-2 pb-2 mx-auto">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">Dr. Male Wasswa</h4>
-                                                <h6 class="card-title text-secondary">Director | Zukuuli Muslim Health Centre</h6>
-                                                <p class="small">
-                                                    AutoClinic has helped me so much in following my financial records and stock. 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!-- <img src="./images/" alt="Los Angeles"> -->
-                                <div class="row">
-                                    <div class="col-md-7 mt-2 mb-2 pt-2 pb-2 mx-auto">
-                                        <div class="card ">
-                                            <div class="card-body">
-                                                <h4 class="card-title">John Doe</h4>
-                                                <h6 class="card-title text-secondary">Title | descritpion</h6>
-                                                <p class="small">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sapiente ratione beatae 
-                                                    facere eius quae perferendis temporibus aspernatur. 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!-- <img src="./images/" alt="Los Angeles"> -->
-                                <div class="row">
-                                    <div class="col-md-7 mt-2 mb-2 pt-2 pb-2 mx-auto">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">John Doe</h4>
-                                                <h6 class="card-title text-secondary">Title | descritpion</h6>
-                                                <p class="small">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sapiente ratione beatae 
-                                                    facere eius quae perferendis temporibus aspernatur. 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <!-- Left and right controls -->
-                            <a class="carousel-control-prev" href="#testimonialSlider" data-slide="prev">
-                            <span class="carousel-control-prev-icon bg-dark"></span>
-                            </a>
-                            <a class="carousel-control-next" href="#testimonialSlider" data-slide="next">
-                            <span class="carousel-control-next-icon bg-dark"></span>
-                            </a>
+                <div class="testiSlide">
+                    <div class="">
+                    <figure class="testimonial">
+                        <blockquote>AutoClinic has helped me so much in following my financial records and stock.
+                        <div class="btn"></div>
+                        </blockquote>
+                        <img src="./images/team1.png" alt="avatar" />
+                        <div class="peopl">
+                        <h3 class="text-dark">Dr. Male Wasswa</h3>
+                        <p class="text-secondary small">Director Zukuuli Muslim Health Centre</p>
                         </div>
-                    </div>                  
+                    </figure>
+                    </div>
+                
+                    <div class="">
+                    <figure class="testimonial">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        <div class="btn"></div>
+                        </blockquote>
+                        <img src="./images/team2.png" alt="avatar" />
+                        <div class="peopl">
+                        <h3 class="text-dark">Shaan</h3>
+                        <p class="text-secondary">Web Developer</p>
+                        </div>
+                    </figure>
+                    </div>
+                
+                    <div class="">
+                    <figure class="testimonial">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        <div class="btn"></div>
+                        </blockquote>
+                        <img src="./images/team1.png" alt="avatar" />
+                        <div class="peopl">
+                        <h3 class="text-dark">Brian Dean</h3>
+                        <p class="text-secondary">SEO / Blogger</p>
+                        </div>
+                    </figure>
+                    </div>
                 </div>
-            </div>
+                </div>
+           </div>
             <!--END_testimonials-->
             <div class="col-md-12 mt-2 mb-2 pt-2 pb-2 ">
                 <h2 class="text-center text-dark mt-1 pt-1">Our Portifolio</h2>
@@ -697,6 +666,7 @@
 </footer>  
 </body>  
 </html>
+<script src='http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
 <script>
 
     // Get the button:
@@ -718,9 +688,29 @@
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-
+   // When the user clicks on the button, scroll to the top of the document
+   function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    $(document).ready(function () {
+	$('.testiSlide').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1500,
+		responsive: [{
+			breakpoint: 850,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+			}
+		}]
+	});
+});
  </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     $(function() {
         $('a[href*=\\#]:not([href=\\#])').on('click', function() {
@@ -734,4 +724,4 @@
             }
         });
     });
-</script>
+</script> -->
